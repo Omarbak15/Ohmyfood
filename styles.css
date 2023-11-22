@@ -1,35 +1,103 @@
-/***** Géneral *****/
-
 * {
-    font-family: 'Roboto', sans-serif;
-}
+    font-family : "Roboto", sans-serif;
+    }
+    body {
+    margin : 0 auto;
+    }
 
-body {
-    display: flex;
-    justify-content: center;
-    font-family: 'roboto', sans-serif;
-}
+    img {
+        width: 150px;
+    }
 
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
+    a {
+        color: inherit;
+        text-decoration: none;
+        color: white;
+    }
 
 /***** header *****/
 
-header {
-    width: 100%;
-    height: 100%;
-    box-shadow: 0px 6px 13px -7px rgb(153, 153, 153);
+    header {
+    width : 100%;
+    box-shadow: 0px 2px 4px 0px #00000026;
+    display : flex;
+    }
+    header h1 {
+    margin : auto;
+    }
+    header h1 img {
+    margin : auto;
+    width : 100%;
+    max-width : 150px;
+    padding : 15px;
+    }
+
+/**** body ****/
+
+.intro {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
-header h1 img {
-    margin: auto;
-    height: 100%;
-    width: 80%;
-    padding: 16px;
+.localisation {
+    background-color : rgb(239, 239, 239);
+    height : 50px;
+ }
+
+.localisation i {
+    height : 100%;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    color : #eaeaea;
+ }
+
+input {
+    width: 125px;
+    font-size : 15px;
+    background-color : transparent;
+    border : none;
+    margin-left : 10px;
+    font-weight: bolder;
 }
+
+.texte-intro {
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    text-align: center;
+    background-color : #f6f6f6;
+    padding : 40px;
+}
+
+.button-intro {
+    border-radius: 28px;
+    color: white;
+    font-size: 16px;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+
+}
+
+
+
+/**** footer ****/
+
+    footer {
+    height : 186px;
+    background-color : #323232;
+    display: flex;
+    flex-direction: column;
+    }
+
+    footer h2{
+        color: white;
+    }
+    
+    .footer-liens {
+        display: flex;
+        flex-direction: column;
+    }
 
