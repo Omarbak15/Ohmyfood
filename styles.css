@@ -213,7 +213,22 @@ img{
     right: 32px;
     bottom: 23px;
     font-size: 24px; 
+    cursor: pointer;
 }
+
+.heart-full{
+    opacity: 0;
+    transition: all;
+    transition-duration: 0.5s;
+    &:hover{
+        opacity: 1;
+        color: transparent;
+        -webkit-background-clip: text;
+        background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+        background-clip: text;
+    }
+}
+
 
 
 
@@ -266,6 +281,7 @@ footer {
 
     .titre-menu {
         display: flex;
+        position: relative;
     }
     .titre-menu h2{
         font-family: 'Shrikhand', serif;
@@ -286,6 +302,21 @@ footer {
         cursor: pointer;
         background-color: white;
         height: 72px;
+        overflow: hidden;
+    }
+    .button-plats:hover>.check{
+        margin-right: 0;
+    }
+    @keyframes checkrotate{
+        0% {
+            transform: rotate(-300deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+    .button-plats:hover i{
+        animation: checkrotate 0.5s ease
     }
 
     .text-plats{
@@ -312,4 +343,56 @@ footer {
         font-weight: bolder;
         padding: 0px 20px 12px 0px;
     }
+    
+    .check{
+        display: flex;
+        width: 67px;
+        background: #99E2D0;
+        justify-content: center;
+        border-radius: 0px 15px 15px 0px;
+        align-items: center;
+        margin-right: -60px;
+        transition: 0.5s;
+    }
+    .icone-check{
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+    }
+
+    .heart-palette{
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    top: 21px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    }
+
+    .pos-heart-palette{
+        position: absolute;
+    }
+    
+    /**** loader ****/
+
+.loader{
+    position:absolute;
+    height: 150px;
+    width: 150px;
+    border: 12px solid #FF79DA;
+    border-radius: 50%;
+    border-top-color:#9356DC;
+    animation: spin 1s infinite;
+    animation-duration: 2s;
+  }
+  
+  @keyframes spin{
+    100%{
+      transform: rotate(360deg)
+    }
+  }
+
     
