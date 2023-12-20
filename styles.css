@@ -303,6 +303,7 @@ footer {
         background-color: white;
         height: 72px;
         overflow: hidden;
+        animation: button-anim 0.9s;
     }
     .button-plats:hover>.check{
         margin-right: 0;
@@ -351,7 +352,7 @@ footer {
         justify-content: center;
         border-radius: 0px 15px 15px 0px;
         align-items: center;
-        margin-right: -60px;
+        margin-right: -67px;
         transition: 0.5s;
     }
     .icone-check{
@@ -375,8 +376,38 @@ footer {
     .pos-heart-palette{
         position: absolute;
     }
+
+    hr {
+        width: 40px;
+        border: 1px solid #99E2D0;
+        margin: 0;
+        }
+    
+        .marg-bott-h3{
+            margin-bottom: 5px;
+        }
+        .div-menu{
+            display: flex;
+            flex-direction: column;
+        }
+        .main-menu{
+            display: flex;
+            flex-direction: column;
+        }
     
     /**** loader ****/
+
+.contenair-loader{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    z-index: 10;
+    width: 100%;
+    background-color: whitesmoke;
+    align-items: center;
+    position: fixed;
+    animation: loader-off 3s forwards;
+ }
 
 .loader{
     position:absolute;
@@ -394,5 +425,84 @@ footer {
       transform: rotate(360deg)
     }
   }
+  @keyframes loader-off{
+    to {
+       display: none;
+ }
+}
+
+.anim-entrees{
+    animation: anim-menu 0.9s;
+}
+
+.anim-plats{
+    animation: anim-menu 1.4s ;
+}
+
+.anim-desserts{
+    animation: anim-menu 1.8s;
+}
+
+@keyframes anim-menu {
+    0% {
+        opacity:0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+@keyframes button-anim{
+    0% {
+        transform: scale(0)
+    }
+    100% {
+        transform:scale(1)
+    }
+}
+
+@media screen and (min-width:768px) {
+    nav {
+        height: auto;
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+    .flitres {
+        display: flex;
+        flex-direction: row;
+    }
+
+    footer {
+        height: auto;
+        flex-direction: row-reverse;
+        gap: 30px;
+    }
+    .footer-liens{
+        flex-direction: row;
+        padding-top: 30px;
+    }
+    .main-menu{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .restaurants{
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+    .div-menu{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+    .menu-restaurant{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 50px;
+    }
+
+}
 
     
