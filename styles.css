@@ -326,16 +326,17 @@ footer {
         width: 100%;
         justify-content: center;
         padding-left: 10px;
+        overflow: hidden;
     }
 
+    .text-plats>p,
     .text-plats>h4 {
-        margin-bottom: 16px;
         font-size: 18px;
-    }
-
-    .text-plats>p {
-        margin-top: -9px;
-    }
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        margin: 0;
+}
 
 
     .prix{
@@ -498,9 +499,31 @@ footer {
     }
     .menu-restaurant{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         gap: 50px;
+    }
+
+    .menu {
+        padding: 30px 150px;
+        width: 60%;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    .titre-menu{
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .heart-palette{
+        display: flex;
+        top: 21px;
+        right: 20px;
+        font-size: 24px;
+        cursor: pointer;
+        align-items: center;
+        position: initial;
     }
 
 }
