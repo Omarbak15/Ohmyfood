@@ -220,13 +220,14 @@ img{
     opacity: 0;
     transition: all;
     transition-duration: 0.5s;
-    &:hover{
+}
+
+.heart-full:hover{
         opacity: 1;
         color: transparent;
         -webkit-background-clip: text;
         background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
         background-clip: text;
-    }
 }
 
 
